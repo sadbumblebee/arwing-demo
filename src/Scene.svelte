@@ -141,10 +141,11 @@
 
 {#if $gltf}
   <T.Group position={[posX, posY, posZ]} rotation={[tiltX, rotY, tiltZ, 'YZX']}>
-  <T.Mesh position={[0, 0, 1.3]}>
-  <T.SphereGeometry args={[0.1]} />
-  <T.MeshBasicMaterial color="#00ff88" />
-</T.Mesh>
+  <!-- For checking the position of the nose of the arwing -->
+  <!-- <T.Mesh position={[0, 0, 1.3]}>
+    <T.SphereGeometry args={[0.1]} />
+    <T.MeshBasicMaterial color="#00ff88" />
+  </T.Mesh> -->
     <T is={$gltf.scene} />
     <T.Points bind:ref={thrusterParticles}>
       <T.BufferGeometry>
