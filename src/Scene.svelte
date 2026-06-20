@@ -1,11 +1,12 @@
 <script>
+  import { base } from '$app/paths'
   import { T, extend, useTask } from '@threlte/core'
   import { useGltf, Grid } from '@threlte/extras'
   import * as THREE from 'three'
 
   extend(THREE)
 
-  const gltf = useGltf('/arwing.glb')
+  const gltf = useGltf(`${base}/arwing.glb`)
 
   let posX = $state(0)
   let posY = $state(0)
